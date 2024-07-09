@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -25,10 +24,11 @@ class SearchPage extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: TextField(
             onSubmitted: (value) async {
-               videoModel =
-                  await Youtubeservice(Dio()).getvideolist(channelid: value);
+              // ignore: unused_local_variable
+              List<VideoModel> videoModel =
+                  await Youtubeservice(Dio()).getvideolist();
+              // ignore: use_build_context_synchronously
               GoRouter.of(context).push('/youtubeViewbody');
-              log(videoModel!.id);
             },
             controller: _searchController,
             decoration: InputDecoration(
