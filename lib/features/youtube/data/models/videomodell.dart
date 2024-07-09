@@ -7,7 +7,7 @@ class VideoModel {
   final String? desc;
   final String? image;
   final String? chTitle;
-  final String? Type;
+  final String? type;
 
   VideoModel({
     required this.id,
@@ -15,7 +15,7 @@ class VideoModel {
     required this.desc,
     required this.image,
     required this.chTitle,
-    required this.Type,
+    required this.type,
     required this.publishedat,
   });
 
@@ -26,7 +26,7 @@ class VideoModel {
       desc: json['items'][0]['snippet']['description'],
       image: json['items'][0]['snippet']['thumbnails']['maxres']?['url'] ?? '',
       chTitle: json['items'][0]['snippet']['channelTitle'],
-      Type: json['items'][0]['snippet']['type'],
+      type: json['items'][0]['snippet']['type'],
       publishedat: json['items'][0]['snippet']['publishedAt'],
     );
   }

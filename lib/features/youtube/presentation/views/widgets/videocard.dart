@@ -25,7 +25,7 @@ class Videocard extends StatelessWidget {
               style: const TextStyle(color: Colors.black, fontSize: 32)),
           Text(videoModel.chTitle ?? '',
               style: const TextStyle(color: Colors.black, fontSize: 32)),
-          Text(videoModel.Type ?? '',
+          Text(videoModel.type ?? '',
               style: const TextStyle(color: Colors.black, fontSize: 32)),
           Text(videoModel.publishedat ?? '',
               style: const TextStyle(color: Colors.black, fontSize: 32)),
