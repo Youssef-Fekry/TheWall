@@ -19,9 +19,14 @@ void dispose() {
 class _VideosResultlistviewState extends State<VideosResultlistview> {
   List<VideoModel> itemModel = [];
   @override
-  void initState() async {
+  void initState() {
     super.initState();
+    getVideoslist();
+  }
+
+  Future<void> getVideoslist() async {
     itemModel = await Youtubeservice(Dio()).getvideolist();
+    setState(() {});
   }
 
   @override

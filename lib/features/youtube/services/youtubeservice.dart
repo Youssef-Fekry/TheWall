@@ -7,7 +7,7 @@ class Youtubeservice {
 
   Youtubeservice(this.dio);
   Future<List<VideoModel>> getvideolist() async {
-    Response response = await dio.get(
+    var response = await dio.get(
         'https://www.googleapis.com/youtube/v3/activities?part=snippet&channelId=UCpFwPWlKZD1lgpZ6oFMf5IA&key=AIzaSyCrFpfPBPWHM3lLRSpdymVNbBM-vr4nu6g');
     Map<String, dynamic> jsonData = response.data;
     List<dynamic> items = jsonData['items'];
